@@ -1,0 +1,9 @@
+<div style="background-color: pink">
+  <!--  <p>parent works! <em style="color:red">{{rmsg}}</em></p>
+    <app-sender-child (send)="getValue($event)"></app-sender-child> -->
+
+   <p>{{pnum}}</p>
+   <app-sender-child (sendValtoParent)="getNum($event)"></app-sender-child>
+
+    <app-receiver-child [rNumVal]="pnum"></app-receiver-child>
+</div>

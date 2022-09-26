@@ -1,0 +1,15 @@
+<h3 *ngIf="msg !== ''"> Structural Directive : {{msg}}</h3>
+<h3 [hidden]="msg ===''">Attribute Directive: {{msg}}</h3>
+<button (click)="setMessage()">Set Message</button>
+
+
+
+<div *ngIf="names.length > 0; else noData">
+<h5>Friend List</h5>
+<ol>
+    <li *ngFor="let name of names">{{name}}</li>
+</ol>
+</div>
+<ng-template #noData>
+    <h3>nothing to show</h3>
+</ng-template>

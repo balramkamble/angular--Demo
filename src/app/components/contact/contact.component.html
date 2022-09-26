@@ -1,0 +1,19 @@
+<div class="card" [class]="newAddCls">
+
+   
+   <h3>{{title}} {{name}}</h3>
+    <hr />
+    <h4 *ngIf="mobile !== ''">Mobile: {{mobile}}</h4>
+    <h4 *ngIf="email !== ''">Email: {{email}}</h4>
+
+    <input type="checkbox" checked (change)="changeContactStatus()" /> Contacted
+
+
+</div>
+
+
+
+
+
+
+

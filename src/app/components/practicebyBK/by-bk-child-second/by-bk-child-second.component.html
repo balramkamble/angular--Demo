@@ -1,0 +1,37 @@
+<div class="alert alert-danger">
+  <h2>Second Child</h2>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>
+          ID
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+          User name
+        </th>
+        <th>
+          Email
+        </th>
+        <th>
+          Mobile
+        </th>
+        <th>Status</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor=" let elist of emp; index as i">
+       <td>{{elist.id}}</td>
+       <td>{{elist.name}}</td>
+       <td>{{elist.username}}</td>
+       <td>{{elist.email}}</td>
+       <td>{{elist.phone}}</td>
+       <td><button class="btn btn-primary" (click)="sDdataSend([elist.id,elist.name,elist.username,elist.email,elist.phone])">Send Record</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

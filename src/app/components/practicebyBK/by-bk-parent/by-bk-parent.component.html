@@ -1,0 +1,12 @@
+<div class="alert alert-primary">
+  <h2>Parent</h2>
+
+  <div class="alert alert-danger">
+    <p *ngFor="let rt of rData">
+      {{rt}}
+    </p>
+  </div>
+
+  <app-by-bk-child-first [allUlist]="uList"></app-by-bk-child-first>
+  <app-by-bk-child-second (oAllEmp)="getEdata($event)"></app-by-bk-child-second>
+</div>

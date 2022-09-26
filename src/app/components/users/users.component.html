@@ -1,0 +1,31 @@
+<h3>all data in table</h3>
+<!--<table class="table teable-bordered">
+    <thead>
+        <tr>
+            <td> id</td>
+            <td> name</td>
+            <td> username</td>
+            <td> email</td>
+            <td> phone</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usr of users">
+            <td>{{usr.id}}</td>
+            <td>{{usr.name}}</td>
+            <td>{{usr.username}}</td>
+            <td>{{usr.email}}</td>
+            <td>{{usr.phone}}</td>
+        </tr>
+    </tbody>
+</table> -->
+
+
+<ol *ngIf="!isLoading; else loading">
+    <li *ngFor="let user of users">
+        <a [routerLink]="[user.id]">{{user.name}}</a>
+    </li>
+</ol>
+<ng-template #loading>
+<h2>Loading Data. Please wait....</h2>
+</ng-template>
